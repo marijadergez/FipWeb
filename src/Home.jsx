@@ -1,9 +1,7 @@
 import { IME_APLIKACIJE } from "../constants";
-import { Col, Row, Card } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import React from 'react';
-import Izbornik from "./components/Izbornik";
 
 
 export default function Home() {

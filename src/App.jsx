@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Izbornik from './components/Izbornik'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './Home'
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Izbornik />
+     
       <div className="ticks"></div>
       <div className="App">
         <div className="left">
