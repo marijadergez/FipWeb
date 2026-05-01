@@ -1,17 +1,126 @@
+/* src/App.css */
+
+/* --- Osnovne varijable boja --- */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --text-main: #4a4a4a;
+  --text-secondary: #7a7a7a;
+  --accent-beige: #e6e1d4;
+  --accent-dark: #8c8676;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* GLASSMORFISM KLASA */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.12);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.glass-card h1, .glass-card h2, .glass-card h3 {
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.glass-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text-main);
+  transform: scale(1.02);
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--accent-dark) !important;
+}
 
 
+/* --- Navbar Glass Stilovi --- */
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.7) !important; /* Više prozirnosti */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.8rem 0;
+  transition: all 0.3s ease;
+}
 
+.navbar-glass .navbar-brand {
+  color: var(--text-main) !important;
+  font-size: 1.25rem;
+}
 
+.navbar-glass .nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
 
+.navbar-glass .nav-link:hover,
+.navbar-glass .nav-link.active {
+  color: var(--accent-dark) !important;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
 
+/* Hamburger meni na mobitelu */
+.navbar-glass .navbar-toggler {
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+}
 
-
-
-
-
-
-
-
+.navbar-glass .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(74, 74, 74, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
 
 

@@ -1,23 +1,22 @@
-import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
 import Home from './Home'
-
+import { Container } from 'react-bootstrap'
+import Izbornik from './components/Izbornik'
+import { IME_APLIKACIJE } from "../constants"; 
+import { RouteNames } from "../constants"; 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     
-      <div className="ticks"></div>
-      <div className="App">
-        <div className="left">
-          <h1>FIP Web</h1>
-          <p>FIP Web is a web application for the FIP project. It is a tool for the management of the FIP project.</p>
-          <a href="https://github.com/fip/fip-web" target="_blank" rel="noopener noreferrer">
-          </a>
-        </div>
+      <Izbornik />
+      <Container className="mt-4">
+        <Routes>
+          <Route path={RouteNames.HOME} element={<Home />} />
+        </Routes>
+      </Container>
+      <hr />
+      <div className="text-center">
+        &copy; {new Date().getFullYear()} {IME_APLIKACIJE}
       </div>
     </>
   )
