@@ -4,6 +4,9 @@ import { Container } from 'react-bootstrap'
 import Izbornik from './components/Izbornik'
 import { IME_APLIKACIJE } from "../constants"; 
 import { RouteNames } from "../constants"; 
+import bgImage from './assets/bg.jpg'; 
+
+
 
 function App() {
   return (
