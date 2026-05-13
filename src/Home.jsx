@@ -104,14 +104,13 @@ export default function Home() {
 
 
 
-
-
-
             </p>
             <p className="text-muted small">
               Pripremite se za budućnost financijskog menadžmenta.
             </p>
           </GlassCard>
+
+          
           {/* Kartica 2 */}
           <Col md={6} lg={4}>
             <GlassCard title="Zašto Mi?">
