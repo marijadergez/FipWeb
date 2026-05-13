@@ -1,6 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { IME_APLIKACIJE } from "../constants";
 import GlassCard from "./components/GlassCard";
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
           </p>
         </Col>
       </Row>
-      
+
       <Row className="g-4 justify-content-center">
         {/* Kartica 1 */}
         <Col md={6} lg={4}>
@@ -33,7 +35,7 @@ export default function Home() {
           </GlassCard>
         </Col>
 
-       
+
         {/* Kartica 3 */}
         <Col md={6} lg={4}>
           <GlassCard title="FIP Web Platforma">
@@ -67,61 +69,100 @@ export default function Home() {
           <GlassCard title="Cjenik Usluga">
             <p>
               <em>•  Vođenje poslovni knjiga za OPG
-              1 klijent - 60 eura mjesečno</em><br />
+                1 klijent - 60 eura mjesečno</em><br />
               <em>•    Sastavljanje PO-SD obrasca - 200,00 eura</em><br />
               <em>• Vođenje poslovnih knjiga u sustavu dvojnog knjigovodstva za j.d.o.o. /d.o.o.
-              1 klijent - 150 eura mjesečno</em><br />
+                1 klijent - 150 eura mjesečno</em><br />
               <em>• Sastavljanje završnog računa za j.d.o.o./d.o.o. -350 eura </em><br />
               <em>• Vođenje poslovnih knjiga za redovne obrtnike kroz dvojno knjigovodstvo – 1 klijent - 150 eura mjesečno</em><br />
               <em>• Završno izvješćivanje za obrtnike kroz sastavljanje GIF obrasca - 350 eura </em><br />
               <em>• Vođenje poslovnih knjiga jednostavnog knjigovodstva za paušalne obrte
-              2 klijenta - 60 eura mjesečno </em><br />
+                2 klijenta - 60 eura mjesečno </em><br />
               <em>• Sastavljanje PO-SD obrasca za paušalne obrtnike -200 eura </em><br />
               <em>•  Vođenje poslovnih knjiga za udruge
-              2 klijenta - 60 eura mjesečno</em><br />
+                2 klijenta - 60 eura mjesečno</em><br />
               <em>• Vođenje poslovni knjiga za OPG
-              3 klijenta - 60 eura mjesečno</em><br />
+                3 klijenta - 60 eura mjesečno</em><br />
               <em>• Sastavljanje PO-SD obrasca 200,00 eura jednokratno</em><br />
               <em>• Vođenje poslovnih knjiga u sustavu dvojnog knjigovodstva za j.d.o.o. / d.o.o.
-              1 klijent - 150 eura mjesečno </em><br />
-              <em>• 
-              Sastavljanje završnog računa za j.d.o.o./d.o.o. - 350 eura</em><br />
+                1 klijent - 150 eura mjesečno </em><br />
+              <em>•
+                Sastavljanje završnog računa za j.d.o.o./d.o.o. - 350 eura</em><br />
               <em>•  Vođenje poslovnih knjiga za redovne obrtnike kroz dvojno knjigovodstvo –
-              1 klijent - 150 eura mjesečno</em><br />
+                1 klijent - 150 eura mjesečno</em><br />
               <em>• Završno izvješćivanje za obrtnike kroz sastavljanje GIF obrasca -350 eura</em><br />
               <em>• Vođenje poslovnih knjiga jednostavnog knjigovodstva za paušalne obrte
-              4 klijenta - 60 eura mjesečno</em><br />
+                4 klijenta - 60 eura mjesečno</em><br />
               <em>• Sastavljanje PO-SD obrasca za paušalne obrtnike 200,00 eura jednokratno
-              Vođenje poslovnih knjiga za udruge 5 klijenata - 60 eura mjesečno</em><br />
-              <em>• 
-              Vođenje poslovni knjiga za OPG
-              5 klijenata - 70 eura mjesečno</em><br />
+                Vođenje poslovnih knjiga za udruge 5 klijenata - 60 eura mjesečno</em><br />
+              <em>•
+                Vođenje poslovni knjiga za OPG
+                5 klijenata - 70 eura mjesečno</em><br />
               <em>• Sastavljanje PO-SD obrasca - 200,00 eura</em><br />
               <em>• Vođenje poslovnih knjiga u sustavu dvojnog knjigovodstva za j.d.o.o. /d.o.o.  2 klijenta - 200 eura mjesečno</em><br />
-               <em>• Sastavljanje završnog računa za j.d.o.o./d.o.o. -350 eura</em><br />
-              
-              
-              
-             
-              
+              <em>• Sastavljanje završnog računa za j.d.o.o./d.o.o. -350 eura</em><br />
+
+
+
+
+
 
             </p>
             <p className="text-muted small">
               Pripremite se za budućnost financijskog menadžmenta.
             </p>
           </GlassCard>
-           {/* Kartica 2 */}
-        <Col md={6} lg={4}>
-          <GlassCard title="Zašto Mi?">
-            <p>
-              Koristimo najnovije tehnologije za brže i preciznije usluge.
-              Vaš podaci su sigurni, a mi smo tu 24/7 za svako pitanje.
-            </p>
-            <button className="btn btn-glass mt-3">
-              Kontaktirajte nas
-            </button>
-          </GlassCard>
-        </Col>
+          {/* Kartica 2 */}
+          <Col md={6} lg={4}>
+            <GlassCard title="Zašto Mi?">
+              <p>
+                Koristimo najnovije tehnologije za brže i preciznije usluge.
+                Vaš podaci su sigurni, a mi smo tu 24/7 za svako pitanje.
+              </p>
+              <button className="btn btn-glass mt-3">
+                Kontaktirajte nas
+              </button>
+
+              <hr />
+
+              <Row className="g-2">
+                <Col md>
+                  <FloatingLabel controlId="floatingInputGrid" label="Email address">
+                    <Form.Control type="email" placeholder="name@example.com" />
+                  </FloatingLabel>
+                </Col>
+
+                <Row>
+                <Col md>
+                  <FloatingLabel
+                    controlId="floatingSelectGrid"
+                    label="E-mail je obavezan!"
+                  ></FloatingLabel>
+                  <FloatingLabel controlId="floatingSelect" >
+                    <Form.Select aria-label="Floating label select example">
+                      <option>Odaberite opciju:</option>
+                      <option value="1">Obrtnik</option>
+                      <option value="2">Tvrtka</option>
+                      <option value="3">Ostalo</option>
+                    </Form.Select>
+                  </FloatingLabel>
+
+                </Col>
+                </Row>
+              </Row>
+
+
+
+
+              <FloatingLabel controlId="floatingTextarea" label="Hvala! ">
+                <Form.Control
+                  as="textarea"
+                  placeholder="Ostavite upit ovdje"
+                  style={{ height: '100px' }}
+                />
+              </FloatingLabel>
+            </GlassCard>
+          </Col>
 
         </Col>
       </Row>
