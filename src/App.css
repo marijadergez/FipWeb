@@ -1666,3 +1666,104 @@ hr {
 
   display: block;
 }
+
+/* =========================================
+   USLUGE - QUICK LINKS
+   ========================================= */
+
+.services-intro-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.services-intro-links a {
+  position: relative;
+
+  color: var(--burgundy);
+
+  font-weight: 800;
+  font-size: 0.95rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.services-intro-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -4px;
+
+  height: 2px;
+
+  border-radius: 5px;
+
+  background: var(--green);
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.services-intro-links a:hover {
+  color: var(--green-dark);
+
+  transform: translateY(-2px);
+}
+
+.services-intro-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.services-intro-links span {
+  color: var(--text-light);
+
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   SMOOTH SCROLL OFFSET
+   ========================================= */
+
+#digitalno-poslovanje,
+#cjenik {
+  scroll-margin-top: 95px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+  .services-intro-links {
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 24px;
+  }
+
+  .services-intro-links span {
+    display: none;
+  }
+
+  .services-intro-links a {
+    font-size: 0.94rem;
+  }
+}

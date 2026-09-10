@@ -7,33 +7,47 @@ export default function Usluge() {
     <div className="page-content">
 
       {/* =========================
-          NASLOV
-          ========================= */}
-      <section className="section pt-5">
-        <Container>
+    NASLOV
+    ========================= */}
 
-          <Row className="justify-content-center text-center">
-            <Col lg={8}>
+<section className="section pt-5">
+  <Container>
 
-              <span className="section-label">
-                FIP Knjigovodstvo i računovodstvo
-              </span>
+    <Row className="justify-content-center text-center">
+      <Col lg={8}>
 
-              <h1 className="display-4 fw-bold mb-3">
-                Naše usluge
-              </h1>
+        <span className="section-label">
+          FIP Knjigovodstvo i računovodstvo
+        </span>
 
-              <p className="lead text-muted">
-                Pouzdana računovodstvena i financijska podrška
-                prilagođena vašem poslovanju.
-              </p>
+        <h1 className="display-4 fw-bold mb-3">
+          Naše usluge
+        </h1>
 
-            </Col>
-          </Row>
+        <p className="lead text-muted">
+          Pouzdana računovodstvena i financijska podrška
+          prilagođena vašem poslovanju.
+        </p>
 
-        </Container>
-      </section>
+        <div className="services-intro-links">
 
+          <a href="#digitalno-poslovanje">
+            Digitalno poslovanje
+          </a>
+
+          <span>•</span>
+
+          <a href="#cjenik">
+            Cjenik
+          </a>
+
+        </div>
+
+      </Col>
+    </Row>
+
+  </Container>
+</section>
 
       {/* =========================
           KNJIGOVODSTVO
@@ -228,7 +242,10 @@ export default function Usluge() {
       {/* =========================
           DIGITALNO POSLOVANJE
           ========================= */}
-      <section className="section">
+      <section
+        className="section"
+        id="digitalno-poslovanje"
+      >
         <Container>
 
           <Row className="justify-content-center">
@@ -334,7 +351,10 @@ export default function Usluge() {
       {/* =========================
           CJENIK
           ========================= */}
-      <section className="section">
+      <section
+        className="section"
+        id="cjenik"
+      >
         <Container>
 
           <Row className="justify-content-center">
