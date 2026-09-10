@@ -1767,3 +1767,50 @@ hr {
     font-size: 0.94rem;
   }
 }
+/* =========================
+   FOOTER – FIX
+========================= */
+
+.fip-footer {
+  width: 100%;
+  margin: 0;
+  padding: 28px 0 32px;
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+}
+
+.fip-footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.fip-footer .footer-bottom span {
+  display: inline-block;
+}
+
+/* Ako je footer na Uslugama odmah nakon CTA-a */
+.cta-section + .fip-footer {
+  margin-top: 0;
+}
+
+/* MOBITEL */
+@media (max-width: 767px) {
+  .fip-footer {
+    padding: 24px 0 22px;
+  }
+
+  .fip-footer .footer-bottom {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

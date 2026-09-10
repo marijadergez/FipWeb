@@ -1,5 +1,11 @@
 
 import { Container, Row, Col } from "react-bootstrap";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa";
+
 import GlassCard from "../GlassCard";
 
 export default function Usluge() {
@@ -443,77 +449,69 @@ export default function Usluge() {
       </section>
 
 
-      <div className="cta-socials">
+ {/* CTA + SOCIALS */}
+<section className="cta-section">
+  <div className="cta-inner">
 
+    <span className="cta-label">
+      FIP Knjigovodstvo i računovodstvo
+    </span>
+
+    <h2>Treba vam računovodstvena podrška?</h2>
+
+    <p>
+      Javite nam se i razgovarajmo o vašem poslovanju.
+      Zajedno možemo pronaći model usluge koji odgovara
+      vašim potrebama.
+    </p>
+
+    <button className="btn btn-light">
+      Kontaktirajte nas
+    </button>
+
+<div className="cta-socials">
   <a
     href="#"
     className="social-icon"
     aria-label="Instagram"
   >
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="3"
-        width="18"
-        height="18"
-        rx="5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-
-      <circle
-        cx="12"
-        cy="12"
-        r="4.2"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-
-      <circle
-        cx="17.4"
-        cy="6.7"
-        r="1"
-        fill="currentColor"
-      />
-    </svg>
+    <FaInstagram />
   </a>
-
 
   <a
     href="#"
     className="social-icon"
     aria-label="Facebook"
   >
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      fill="currentColor"
-    >
-      <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4z" />
-    </svg>
+    <FaFacebookF />
   </a>
-
 
   <a
     href="#"
     className="social-icon"
     aria-label="LinkedIn"
   >
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      fill="currentColor"
-    >
-      <path d="M5.2 3.5A2.2 2.2 0 1 0 5.2 8a2.2 2.2 0 0 0 0-4.5zM3.4 9.5h3.6V21H3.4V9.5zm5.8 0h3.5v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.6V21h-3.6v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9.2V9.5z" />
-    </svg>
+    <FaLinkedinIn />
   </a>
-
 </div>
+
+  </div>
+</section>
+
+{/* FOOTER */}
+<footer className="fip-footer">
+  <Container>
+    <div className="footer-bottom">
+      <span>
+        © {new Date().getFullYear()} FIP Knjigovodstvo i računovodstvo | MDergez 
+      </span>
+
+      <span>
+        Sva prava pridržana.
+      </span>
+    </div>
+  </Container>
+</footer>
 
 
      
