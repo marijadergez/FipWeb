@@ -2,11 +2,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import GlassCard from "../GlassCard";
 
+
+
 export default function Usluge() {
   return (
     <Container className="py-5">
 
-      {/* NASLOV */}
       <Row className="justify-content-center text-center mb-5">
         <Col lg={8}>
           <p className="text-muted mb-2">
@@ -25,7 +26,6 @@ export default function Usluge() {
       </Row>
 
 
-      {/* KNJIGOVODSTVO */}
       <Row className="justify-content-center mb-5">
         <Col lg={10}>
           <GlassCard title="Knjigovodstvo">
@@ -67,7 +67,6 @@ export default function Usluge() {
       </Row>
 
 
-      {/* RAČUNOVODSTVO */}
       <Row className="justify-content-center mb-5">
         <Col lg={10}>
           <GlassCard title="Računovodstvo">
@@ -109,7 +108,6 @@ export default function Usluge() {
       </Row>
 
 
-      {/* POREZNO SAVJETOVANJE */}
       <Row className="justify-content-center mb-5">
         <Col lg={10}>
           <GlassCard title="Porezno savjetovanje">
@@ -132,7 +130,6 @@ export default function Usluge() {
       </Row>
 
 
-      {/* FINANCIJSKO SAVJETOVANJE */}
       <Row className="justify-content-center mb-5">
         <Col lg={10}>
           <GlassCard title="Financijsko savjetovanje">
@@ -172,7 +169,7 @@ export default function Usluge() {
       </Row>
 
 
-      {/* DIGITALNO POSLOVANJE */}
+      
       <Row className="justify-content-center mb-5">
         <Col lg={10}>
           <GlassCard title="Digitalno poslovanje">
@@ -195,7 +192,7 @@ export default function Usluge() {
       </Row>
 
 
-      {/* KOME SU USLUGE NAMIJENJENE */}
+     
       <Row className="justify-content-center mb-5">
         <Col lg={10}>
 
@@ -247,7 +244,7 @@ export default function Usluge() {
       </Row>
 
 
-      {/* CJENIK */}
+
       <Row className="justify-content-center mb-5">
         <Col lg={10}>
 
@@ -339,7 +336,7 @@ export default function Usluge() {
       </Row>
 
 
-      {/* ZAVRŠNI CTA */}
+   
       <Row className="justify-content-center text-center">
         <Col lg={8}>
 

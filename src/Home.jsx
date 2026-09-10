@@ -1,72 +1,81 @@
-
 import { Container, Row, Col } from "react-bootstrap";
-import { IME_APLIKACIJE, RouteNames } from "./constants";
 import { useNavigate } from "react-router-dom";
+import { RouteNames } from "../constants";
 import GlassCard from "./components/GlassCard";
 
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <>
-      {/* HERO */}
-      <section className="py-5">
+    <div className="page-content">
+
+      {/* =========================
+          HERO
+          ========================= */}
+      <section className="hero-section">
         <Container>
           <Row className="justify-content-center text-center">
-            <Col lg={9}>
-              <p className="text-muted mb-2">
+            <Col lg={9} className="hero-content">
+
+              <p className="text-muted mb-3">
                 FIP Knjigovodstvo i računovodstvo
               </p>
 
-              <h1 className="display-3 fw-bold mb-4">
+              <h1>
                 Vaša financijska kontrola.
                 <br />
                 Naša stručnost.
               </h1>
 
-              <p className="lead text-muted mb-4">
+              <p>
                 Pouzdano knjigovodstvo, računovodstvo i financijsko
                 savjetovanje prilagođeno vašem poslovanju.
               </p>
 
               <button
-                className="btn btn-glass"
+                className="btn btn-primary"
                 onClick={() => navigate(RouteNames.USLUGE)}
               >
                 Saznajte više o uslugama
               </button>
+
             </Col>
           </Row>
         </Container>
       </section>
 
-      {/* UVOD */}
-      <section className="py-5">
+
+      {/* =========================
+          UVOD
+          ========================= */}
+      <section className="section">
         <Container>
-          <Row className="justify-content-center text-center mb-5">
-            <Col lg={8}>
-              <h2 className="fw-bold mb-3">
-                Vi vodite posao. Mi brinemo o brojkama.
-              </h2>
 
-              <p className="text-muted">
-                FIP Knjigovodstvo i računovodstvo pruža profesionalne
-                knjigovodstvene, računovodstvene i financijske usluge
-                mikro i malim poduzetnicima, obrtnicima, OPG-ovima,
-                trgovačkim društvima i neprofitnim organizacijama.
-              </p>
+          <div className="section-heading">
 
-              <p className="text-muted">
-                Naš cilj nije samo evidentirati poslovne promjene.
-                Želimo razumjeti vaše poslovanje, pružiti vam jasne
-                informacije i pomoći vam da na temelju financijskih
-                podataka donosite kvalitetne poslovne odluke.
-              </p>
-            </Col>
-          </Row>
+            <h2>
+              Vi vodite posao. Mi brinemo o brojkama.
+            </h2>
 
-          {/* GLAVNE USLUGE */}
-          <Row className="g-4 justify-content-center">
+            <p>
+              FIP Knjigovodstvo i računovodstvo pruža profesionalne
+              knjigovodstvene, računovodstvene i financijske usluge
+              mikro i malim poduzetnicima, obrtnicima, OPG-ovima,
+              trgovačkim društvima i neprofitnim organizacijama.
+            </p>
+
+            <p>
+              Naš cilj nije samo evidentirati poslovne promjene.
+              Želimo razumjeti vaše poslovanje, pružiti vam jasne
+              informacije i pomoći vam da na temelju financijskih
+              podataka donosite kvalitetne poslovne odluke.
+            </p>
+
+          </div>
+
+
+          <Row className="g-4 cards-grid">
+
             <Col md={6} lg={3}>
               <GlassCard title="Knjigovodstvo">
                 <p>
@@ -102,15 +111,23 @@ export default function Home() {
                 </p>
               </GlassCard>
             </Col>
+
           </Row>
+
         </Container>
       </section>
 
-      {/* ŠTO RADIMO */}
-      <section className="py-5">
+
+      {/* =========================
+          VIŠE OD KNJIGOVODSTVA
+          ========================= */}
+      <section className="section">
         <Container>
+
           <Row className="align-items-center g-5">
+
             <Col lg={6}>
+
               <h2 className="fw-bold mb-4">
                 Više od klasičnog knjigovodstva
               </h2>
@@ -133,10 +150,14 @@ export default function Home() {
                 sigurnosti podataka i individualnom pristupu svakom
                 klijentu.
               </p>
+
             </Col>
 
+
             <Col lg={6}>
+
               <GlassCard title="Usluge koje možemo pružiti">
+
                 <ul>
                   <li>Vođenje poslovnih knjiga</li>
                   <li>Obračun plaća i doprinosa</li>
@@ -149,30 +170,40 @@ export default function Home() {
                   <li>Financijska analiza</li>
                   <li>Poslovno savjetovanje</li>
                 </ul>
+
               </GlassCard>
+
             </Col>
+
           </Row>
+
         </Container>
       </section>
 
-      {/* KOME POMAŽEMO */}
-      <section className="py-5">
+
+      {/* =========================
+          KOME POMAŽEMO
+          ========================= */}
+      <section className="section">
         <Container>
-          <Row className="justify-content-center text-center mb-5">
-            <Col lg={8}>
-              <h2 className="fw-bold mb-3">
-                Partner za vaše poslovanje
-              </h2>
 
-              <p className="text-muted">
-                Svoje usluge usmjeravamo prvenstveno prema mikro i
-                malim poduzetnicima kojima je potreban pouzdan i
-                pristupačan računovodstveni partner.
-              </p>
-            </Col>
-          </Row>
+          <div className="section-heading">
 
-          <Row className="g-4 justify-content-center">
+            <h2>
+              Partner za vaše poslovanje
+            </h2>
+
+            <p>
+              Svoje usluge usmjeravamo prvenstveno prema mikro i
+              malim poduzetnicima kojima je potreban pouzdan i
+              pristupačan računovodstveni partner.
+            </p>
+
+          </div>
+
+
+          <Row className="g-4 cards-grid">
+
             <Col md={6} lg={3}>
               <GlassCard title="Obrti">
                 <p>
@@ -208,19 +239,30 @@ export default function Home() {
                 </p>
               </GlassCard>
             </Col>
+
           </Row>
+
         </Container>
       </section>
 
-      {/* ZAŠTO FIP */}
-      <section className="py-5">
+
+      {/* =========================
+          ZAŠTO FIP
+          ========================= */}
+      <section className="section">
         <Container>
+
           <Row className="justify-content-center">
-            <Col lg={9}>
+
+            <Col lg={10}>
+
               <GlassCard title="Zašto FIP?">
+
                 <Row className="g-4">
+
                   <Col md={6}>
                     <h5>Individualan pristup</h5>
+
                     <p className="text-muted">
                       Svaki klijent i svako poslovanje imaju svoje
                       specifičnosti. Zato uslugu prilagođavamo
@@ -228,42 +270,59 @@ export default function Home() {
                     </p>
                   </Col>
 
+
                   <Col md={6}>
                     <h5>Stručnost i kontinuirano obrazovanje</h5>
+
                     <p className="text-muted">
                       Znanje kontinuirano nadograđujemo kroz stručne
                       edukacije i praćenje zakonskih promjena.
                     </p>
                   </Col>
 
+
                   <Col md={6}>
                     <h5>Sigurnost podataka</h5>
+
                     <p className="text-muted">
                       Posebnu pažnju posvećujemo zaštiti povjerljivih
                       financijskih i osobnih podataka naših klijenata.
                     </p>
                   </Col>
 
+
                   <Col md={6}>
                     <h5>Digitalno poslovanje</h5>
+
                     <p className="text-muted">
                       Koristimo suvremena programska rješenja kako bi
                       poslovanje bilo jednostavnije, preglednije i
                       učinkovitije.
                     </p>
                   </Col>
+
                 </Row>
+
               </GlassCard>
+
             </Col>
+
           </Row>
+
         </Container>
       </section>
 
-      {/* STRUČNOST */}
-      <section className="py-5">
+
+      {/* =========================
+          STRUČNOST
+          ========================= */}
+      <section className="section">
         <Container>
+
           <Row className="align-items-center g-5">
+
             <Col lg={7}>
+
               <h2 className="fw-bold mb-4">
                 Znanje na kojem gradimo povjerenje
               </h2>
@@ -285,10 +344,14 @@ export default function Home() {
                 kako bismo svojim klijentima mogli pružiti kvalitetnu
                 i suvremenu uslugu.
               </p>
+
             </Col>
 
+
             <Col lg={5}>
+
               <GlassCard title="Naš pristup">
+
                 <p>
                   Profesionalnost.
                   <br />
@@ -300,38 +363,41 @@ export default function Home() {
                   <br />
                   Individualan odnos s klijentom.
                 </p>
+
               </GlassCard>
+
             </Col>
+
           </Row>
+
         </Container>
       </section>
 
-      {/* POZIV NA AKCIJU */}
-      <section className="py-5">
-        <Container>
-          <Row className="justify-content-center text-center">
-            <Col lg={8}>
-              <h2 className="fw-bold mb-3">
-                Razgovarajmo o vašem poslovanju.
-              </h2>
 
-              <p className="text-muted mb-4">
-                Trebate pouzdano knjigovodstvo, računovodstvo ili
-                financijski savjet? Javite nam se i zajedno ćemo
-                pronaći rješenje prilagođeno vašem poslovanju.
-              </p>
+      {/* =========================
+          CTA
+          ========================= */}
+      <section className="cta-section">
 
-              <button
-                className="btn btn-glass"
-                onClick={() => navigate(RouteNames.USLUGE)}
-              >
-                Pogledajte naše usluge
-              </button>
-            </Col>
-          </Row>
-        </Container>
+        <h2>
+          Razgovarajmo o vašem poslovanju.
+        </h2>
+
+        <p>
+          Trebate pouzdano knjigovodstvo, računovodstvo ili
+          financijski savjet? Javite nam se i zajedno ćemo
+          pronaći rješenje prilagođeno vašem poslovanju.
+        </p>
+
+        <button
+          className="btn btn-light"
+          onClick={() => navigate(RouteNames.USLUGE)}
+        >
+          Pogledajte naše usluge
+        </button>
+
       </section>
-    </>
+
+    </div>
   );
 }
-

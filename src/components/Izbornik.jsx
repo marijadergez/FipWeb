@@ -6,38 +6,57 @@ export default function Izbornik() {
   const navigate = useNavigate();
 
   return (
-    <Navbar 
-      expand="lg" 
-      sticky="top" 
-      className="navbar-glass shadow-sm"
+    <Navbar
+      expand="lg"
+      sticky="top"
+      className="navbar-glass"
     >
       <Container>
-        <Navbar.Brand 
-          href="#" 
+
+        <Navbar.Brand
+          href="#"
           onClick={(e) => {
             e.preventDefault();
             navigate(RouteNames.HOME);
           }}
-          className="fw-bold"
+          className="fip-brand"
         >
-          {IME_APLIKACIJE}
+          <span className="fip-brand-main">FIP</span>
+          <span className="fip-brand-text">
+            Knjigovodstvo i računovodstvo
+          </span>
         </Navbar.Brand>
+
         
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto"> {/* "ms-auto" gura linkove desno */}
-            <Nav.Link 
+
+        <Navbar.Collapse id="fip-navbar">
+          <Nav className="ms-auto fip-nav">
+
+            <Nav.Link
               onClick={() => navigate(RouteNames.HOME)}
-              className="fw-medium"
+              className="fip-nav-link"
             >
               Početna
             </Nav.Link>
-            
-            {/* Ovdje možeš dodati druge linkove kasnije, npr.: */}
-            <Nav.Link onClick={() => navigate(RouteNames.USLUGE)}>Usluge</Nav.Link> 
+
+            <Nav.Link
+              onClick={() => navigate(RouteNames.USLUGE)}
+              className="fip-nav-link"
+            >
+              Usluge
+            </Nav.Link>
+
+            <button
+              className="fip-contact-btn"
+              onClick={() => navigate(RouteNames.USLUGE)}
+            >
+              Kontakt
+            </button>
+
           </Nav>
         </Navbar.Collapse>
+
       </Container>
     </Navbar>
   );
