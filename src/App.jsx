@@ -19,13 +19,10 @@ function App() {
         </Routes>
       </Container>
 
-      <hr />
+        
 
-      <div className="text-center">
-        &copy; {new Date().getFullYear()} {IME_APLIKACIJE}
-      </div>
     </>
   );
 }
-
+  
 export default App;

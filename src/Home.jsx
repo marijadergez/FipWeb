@@ -363,73 +363,76 @@ export default function Home() {
       </section>
 
 
-      {/* =========================================
-          STRUČNOST
-          ========================================= */}
+     {/* =========================================
+    STRUČNOST
+    ========================================= */}
 
-      <section className="section">
-        <Container>
+<section className="section">
+  <Container>
 
-          <Row className="align-items-center g-5">
+    <Row className="align-items-center justify-content-center g-5">
 
-            <Col lg={7}>
+      {/* TEKST */}
 
-              <div className="content-block">
+      <Col lg={7}>
 
-                <span className="section-label">
-                  Stručnost
-                </span>
+        <div className="content-block">
 
-                <h2>
-                  Znanje na kojem gradimo povjerenje
-                </h2>
+          <span className="section-label">
+            Stručnost
+          </span>
 
-                <p>
-                  FIP je nastao na temelju dugogodišnjeg obrazovanja
-                  i kontinuiranog usavršavanja iz područja ekonomije,
-                  financija, bankarstva i knjigovodstva.
-                </p>
+          <h2>
+            Znanje na kojem gradimo povjerenje
+          </h2>
 
-                <p>
-                  Uz formalno obrazovanje i iskustvo, dodatno smo se
-                  educirali iz područja knjigovodstva, zaštite osobnih
-                  podataka i sprječavanja pranja novca.
-                </p>
+          <p>
+            FIP je nastao na temelju dugogodišnjeg obrazovanja
+            i kontinuiranog usavršavanja iz područja ekonomije,
+            financija, bankarstva i knjigovodstva.
+          </p>
 
-                <p>
-                  Pratimo zakonske izmjene i razvoj digitalnih rješenja
-                  kako bismo svojim klijentima mogli pružiti kvalitetnu
-                  i suvremenu uslugu.
-                </p>
+          <p>
+            Uz formalno obrazovanje i iskustvo, dodatno smo se
+            educirali iz područja knjigovodstva, zaštite osobnih
+            podataka i sprječavanja pranja novca.
+          </p>
 
-              </div>
+          <p>
+            Pratimo zakonske izmjene i razvoj digitalnih rješenja
+            kako bismo svojim klijentima mogli pružiti kvalitetnu
+            i suvremenu uslugu.
+          </p>
 
-            </Col>
+        </div>
+
+      </Col>
 
 
-            <Col lg={5}>
+      {/* NAŠ PRISTUP */}
 
-              <GlassCard title="Naš pristup">
+      <Col lg={5}>
 
-                <div className="approach-list">
+        <GlassCard title="Naš pristup">
 
-                  <div>Profesionalnost</div>
-                  <div>Povjerenje</div>
-                  <div>Diskrecija</div>
-                  <div>Kontinuirano učenje</div>
-                  <div>Individualan odnos s klijentom</div>
+          <div className="approach-list">
 
-                </div>
+            <div>Profesionalnost</div>
+            <div>Povjerenje</div>
+            <div>Diskrecija</div>
+            <div>Kontinuirano učenje</div>
+            <div>Individualan odnos s klijentom</div>
 
-              </GlassCard>
+          </div>
 
-            </Col>
+        </GlassCard>
 
-          </Row>
+      </Col>
 
-        </Container>
-      </section>
+    </Row>
 
+  </Container>
+</section>
 
       {/* =========================================
           CTA
