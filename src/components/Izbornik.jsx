@@ -35,7 +35,7 @@ export default function Izbornik() {
             </Nav.Link>
             
             {/* Ovdje možeš dodati druge linkove kasnije, npr.: */}
-            {/* <Nav.Link onClick={() => navigate(RouteNames.USLUGE)}>Usluge</Nav.Link> */}
+            <Nav.Link onClick={() => navigate(RouteNames.USLUGE)}>Usluge</Nav.Link> 
           </Nav>
         </Navbar.Collapse>
       </Container>

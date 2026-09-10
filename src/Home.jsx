@@ -1,170 +1,337 @@
+
 import { Container, Row, Col } from "react-bootstrap";
-import { IME_APLIKACIJE } from "../constants";
+import { IME_APLIKACIJE, RouteNames } from "./constants";
+import { useNavigate } from "react-router-dom";
 import GlassCard from "./components/GlassCard";
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
-    <Container className="py-5">
-      <Row className="justify-content-center text-center mb-5">
-        <Col md={8}>
-          <h1 className="display-4 fw-bold mb-3" style={{ color: '#4e4e4d' }}>
-            Dobrodošli na {IME_APLIKACIJE}
-          </h1>
-          <p className="lead text-muted">
-            Profesionalno knjigovodstvo i računovodstvo za vaše poslovanje.
-          </p>
-        </Col>
-      </Row>
-
-      <Row className="g-4 justify-content-center">
-        {/* Kartica 1 */}
-        <Col md={6} lg={4}>
-          <GlassCard title="Naše Usluge">
-            <p>Klijentima sam spremna ponuditi i digitalno poslovanje odnosno dostavljanje digitalne dokumentacije kroz suvremena aplikativna rješenja što nije slučaj u knjigovodstvenim servisima s kojima sam se do sada susretala.
-              Svoje poslovanje planiram usmjeriti prema mikro i malim poduzetnicima koji su organizirani kroz obrte, d.o.o, j.d.o.o., obiteljska poljoprivredna gospodarstva (OPG) i neprofitne organizacije – udruge i društva.
-
-
-            </p>
-            <p>
-              <em>• Porezno savjetovanje</em><br />
-              <em>• Vođenje evidencije</em><br />
-              <em>• Godišnji zaključci</em>
-            </p>
-          </GlassCard>
-        </Col>
-
-
-        {/* Kartica 3 */}
-        <Col md={6} lg={4}>
-          <GlassCard title="FIP Web Platforma">
-            <p>
-              Vaš pristup svim financijskim podacima na jednom mjestu.
-              Transparentnost, brzina i sigurnost na prvom mjestu.
-            </p>
-            <p className="text-muted small">
-              Pripremite se za budućnost financijskog menadžmenta.
-            </p>
-          </GlassCard>
-        </Col>
-
-        {/* Kartica 4 */}
-        <Col md={6} lg={4}>
-          <GlassCard title="Vaša Financijska Kontrola,moja Stručnost">
-            <p>
-              Svoje obrazovanje u smjeru ekonomije sam započela još sa srednjom školom te sam završila srednju Ekonomsku školu i stekla znanje ekonomist,upisujem Ekonomski fakultet u Osijeku te po završetku istoga stječem VSS zvanje diplomirani ekonomist. Nakon toga upisujem poslijediplomski specijalistički studij na Ekonomskom fakultetu u Osijeku smjer financije i bankarstvo te stječem zvanje Specijaliste iz područja financije i bankarstva. Svojim obrazovanjem stekla sam sva ključna znanja za obavljanje knjigovodstvene djelatnosti u vidu knjigovodstvenog servisa te sam klijentima osim knjigovodstvenih usluga u mogućnosti ponuditi i računovodstvene usluge, financijsko savjetovanje te financijsko opismenjavanje odnosno popratiti poslovanje poduzetnika iz svih aspekata.Prilikom donošenja odluke o otvaranju vlastitog knjigovodstvenog servisa smatrala sam da je dobro da osvježim svoje znanje i nadopunim ga te sam upisala tečaj u EDUNOVI- Ustanovi za obrazovanje odraslih u trajanju od 6 mjeseci za stjecanje kvalifikacije knjigovođe obujma 14 CSVET bodova,-educirala sam se iz područja GDPR-a još kroz svoje prethodno radno iskustvu u banci (Opća uredba o zaštiti podataka) kako bih poduzela adekvatne mjere u cilju zaštite osobnih podataka mojih klijenata.Educirala sam se iz područja AMLa  (Zakon o sprječavanju pranja novca i financiranja terorizma), edukacija mi je izuzetno bitna jer knjigovođe podliježu Zakonu te su obvezne sve sumnjive transakcije koje značajno odstupaju od redovnog poslovanja klijenata prijaviti prema Uredu za sprječavanje pranja novca pri Ministarstvu financija.Uslijed mnogobrojnih zakonskih izmjena u poslovanju obrta, tvrtki, OPG-ova i u udruga i tehnoloških promjena smatram da ću kako bih pratila trendove i izmjene nastaviti sa edukacijama koje organiziraju RRiF i druge institucije koje prate zakonske izmjene i rješenja iz ekonomije.
-
-
-
-            </p>
-            <p className="text-muted small">
-              Pripremite se za budućnost financijskog menadžmenta.
-            </p>
-          </GlassCard>
-        </Col>
-
-        {/* Kartica 5 */}
-        <Col md={6} lg={4}>
-          <GlassCard title="Cjenik Usluga">
-            <p>
-              <em>•  Vođenje poslovni knjiga za OPG
-                1 klijent - 60 eura mjesečno</em><br />
-              <em>•    Sastavljanje PO-SD obrasca - 200,00 eura</em><br />
-              <em>• Vođenje poslovnih knjiga u sustavu dvojnog knjigovodstva za j.d.o.o. /d.o.o.
-                1 klijent - 150 eura mjesečno</em><br />
-              <em>• Sastavljanje završnog računa za j.d.o.o./d.o.o. -350 eura </em><br />
-              <em>• Vođenje poslovnih knjiga za redovne obrtnike kroz dvojno knjigovodstvo – 1 klijent - 150 eura mjesečno</em><br />
-              <em>• Završno izvješćivanje za obrtnike kroz sastavljanje GIF obrasca - 350 eura </em><br />
-              <em>• Vođenje poslovnih knjiga jednostavnog knjigovodstva za paušalne obrte
-                2 klijenta - 60 eura mjesečno </em><br />
-              <em>• Sastavljanje PO-SD obrasca za paušalne obrtnike -200 eura </em><br />
-              <em>•  Vođenje poslovnih knjiga za udruge
-                2 klijenta - 60 eura mjesečno</em><br />
-              <em>• Vođenje poslovni knjiga za OPG
-                3 klijenta - 60 eura mjesečno</em><br />
-              <em>• Sastavljanje PO-SD obrasca 200,00 eura jednokratno</em><br />
-              <em>• Vođenje poslovnih knjiga u sustavu dvojnog knjigovodstva za j.d.o.o. / d.o.o.
-                1 klijent - 150 eura mjesečno </em><br />
-              <em>•
-                Sastavljanje završnog računa za j.d.o.o./d.o.o. - 350 eura</em><br />
-              <em>•  Vođenje poslovnih knjiga za redovne obrtnike kroz dvojno knjigovodstvo –
-                1 klijent - 150 eura mjesečno</em><br />
-              <em>• Završno izvješćivanje za obrtnike kroz sastavljanje GIF obrasca -350 eura</em><br />
-              <em>• Vođenje poslovnih knjiga jednostavnog knjigovodstva za paušalne obrte
-                4 klijenta - 60 eura mjesečno</em><br />
-              <em>• Sastavljanje PO-SD obrasca za paušalne obrtnike 200,00 eura jednokratno
-                Vođenje poslovnih knjiga za udruge 5 klijenata - 60 eura mjesečno</em><br />
-              <em>•
-                Vođenje poslovni knjiga za OPG
-                5 klijenata - 70 eura mjesečno</em><br />
-              <em>• Sastavljanje PO-SD obrasca - 200,00 eura</em><br />
-              <em>• Vođenje poslovnih knjiga u sustavu dvojnog knjigovodstva za j.d.o.o. /d.o.o.  2 klijenta - 200 eura mjesečno</em><br />
-              <em>• Sastavljanje završnog računa za j.d.o.o./d.o.o. -350 eura</em><br />
-
-
-
-            </p>
-            <p className="text-muted small">
-              Pripremite se za budućnost financijskog menadžmenta.
-            </p>
-          </GlassCard>
-
-          
-          {/* Kartica 2 */}
-          <Col md={6} lg={4}>
-            <GlassCard title="Zašto Mi?">
-              <p>
-                Koristimo najnovije tehnologije za brže i preciznije usluge.
-                Vaš podaci su sigurni, a mi smo tu 24/7 za svako pitanje.
+    <>
+      {/* HERO */}
+      <section className="py-5">
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col lg={9}>
+              <p className="text-muted mb-2">
+                FIP Knjigovodstvo i računovodstvo
               </p>
-              <button className="btn btn-glass mt-3">
-                Kontaktirajte nas
+
+              <h1 className="display-3 fw-bold mb-4">
+                Vaša financijska kontrola.
+                <br />
+                Naša stručnost.
+              </h1>
+
+              <p className="lead text-muted mb-4">
+                Pouzdano knjigovodstvo, računovodstvo i financijsko
+                savjetovanje prilagođeno vašem poslovanju.
+              </p>
+
+              <button
+                className="btn btn-glass"
+                onClick={() => navigate(RouteNames.USLUGE)}
+              >
+                Saznajte više o uslugama
               </button>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
-              <hr />
+      {/* UVOD */}
+      <section className="py-5">
+        <Container>
+          <Row className="justify-content-center text-center mb-5">
+            <Col lg={8}>
+              <h2 className="fw-bold mb-3">
+                Vi vodite posao. Mi brinemo o brojkama.
+              </h2>
 
-              <Row className="g-2">
-                <Col md>
-                  <FloatingLabel controlId="floatingInputGrid" label="Email address">
-                    <Form.Control type="email" placeholder="name@example.com" />
-                  </FloatingLabel>
-                </Col>
+              <p className="text-muted">
+                FIP Knjigovodstvo i računovodstvo pruža profesionalne
+                knjigovodstvene, računovodstvene i financijske usluge
+                mikro i malim poduzetnicima, obrtnicima, OPG-ovima,
+                trgovačkim društvima i neprofitnim organizacijama.
+              </p>
 
-                <Row>
-                <Col md>
-                  <FloatingLabel
-                    controlId="floatingSelectGrid"
-                    label="E-mail je obavezan!"
-                  ></FloatingLabel>
-                  <FloatingLabel controlId="floatingSelect" >
-                    <Form.Select aria-label="Floating label select example">
-                      <option>Odaberite opciju:</option>
-                      <option value="1">Obrtnik</option>
-                      <option value="2">Tvrtka</option>
-                      <option value="3">Ostalo</option>
-                    </Form.Select>
-                  </FloatingLabel>
+              <p className="text-muted">
+                Naš cilj nije samo evidentirati poslovne promjene.
+                Želimo razumjeti vaše poslovanje, pružiti vam jasne
+                informacije i pomoći vam da na temelju financijskih
+                podataka donosite kvalitetne poslovne odluke.
+              </p>
+            </Col>
+          </Row>
 
-                </Col>
+          {/* GLAVNE USLUGE */}
+          <Row className="g-4 justify-content-center">
+            <Col md={6} lg={3}>
+              <GlassCard title="Knjigovodstvo">
+                <p>
+                  Vođenje poslovnih knjiga, evidencija i dokumentacije
+                  u skladu s važećim propisima.
+                </p>
+              </GlassCard>
+            </Col>
+
+            <Col md={6} lg={3}>
+              <GlassCard title="Računovodstvo">
+                <p>
+                  Financijsko izvještavanje, završni računi,
+                  porezne obveze i praćenje poslovanja.
+                </p>
+              </GlassCard>
+            </Col>
+
+            <Col md={6} lg={3}>
+              <GlassCard title="Porezno savjetovanje">
+                <p>
+                  Podrška u razumijevanju poreznih obveza i
+                  pravovremenom ispunjavanju zakonskih obveza.
+                </p>
+              </GlassCard>
+            </Col>
+
+            <Col md={6} lg={3}>
+              <GlassCard title="Financijsko savjetovanje">
+                <p>
+                  Analiza poslovanja, planiranje, praćenje troškova
+                  i pomoć pri donošenju financijskih odluka.
+                </p>
+              </GlassCard>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* ŠTO RADIMO */}
+      <section className="py-5">
+        <Container>
+          <Row className="align-items-center g-5">
+            <Col lg={6}>
+              <h2 className="fw-bold mb-4">
+                Više od klasičnog knjigovodstva
+              </h2>
+
+              <p className="text-muted">
+                Suvremeno računovodstvo nije samo knjiženje računa.
+                Ono predstavlja važan izvor informacija za upravljanje
+                poslovanjem.
+              </p>
+
+              <p className="text-muted">
+                Zato FIP svojim klijentima želi pružiti širi pogled na
+                njihovo poslovanje – od svakodnevnog knjigovodstva i
+                obračuna poreznih obveza do financijske analize,
+                planiranja i poslovnog savjetovanja.
+              </p>
+
+              <p className="text-muted">
+                Posebnu pažnju posvećujemo digitalizaciji poslovanja,
+                sigurnosti podataka i individualnom pristupu svakom
+                klijentu.
+              </p>
+            </Col>
+
+            <Col lg={6}>
+              <GlassCard title="Usluge koje možemo pružiti">
+                <ul>
+                  <li>Vođenje poslovnih knjiga</li>
+                  <li>Obračun plaća i doprinosa</li>
+                  <li>Obračun PDV-a</li>
+                  <li>JOPPD obrasci</li>
+                  <li>Porez na dobit i porez na dohodak</li>
+                  <li>Završni financijski izvještaji</li>
+                  <li>PO-SD obrasci</li>
+                  <li>Fiskalizacija i digitalno poslovanje</li>
+                  <li>Financijska analiza</li>
+                  <li>Poslovno savjetovanje</li>
+                </ul>
+              </GlassCard>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* KOME POMAŽEMO */}
+      <section className="py-5">
+        <Container>
+          <Row className="justify-content-center text-center mb-5">
+            <Col lg={8}>
+              <h2 className="fw-bold mb-3">
+                Partner za vaše poslovanje
+              </h2>
+
+              <p className="text-muted">
+                Svoje usluge usmjeravamo prvenstveno prema mikro i
+                malim poduzetnicima kojima je potreban pouzdan i
+                pristupačan računovodstveni partner.
+              </p>
+            </Col>
+          </Row>
+
+          <Row className="g-4 justify-content-center">
+            <Col md={6} lg={3}>
+              <GlassCard title="Obrti">
+                <p>
+                  Knjigovodstvena i računovodstvena podrška za obrtnike,
+                  uključujući paušalne i redovne obrte.
+                </p>
+              </GlassCard>
+            </Col>
+
+            <Col md={6} lg={3}>
+              <GlassCard title="Društva">
+                <p>
+                  Podrška za j.d.o.o. i d.o.o. kroz svakodnevno
+                  računovodstvo i financijsko izvještavanje.
+                </p>
+              </GlassCard>
+            </Col>
+
+            <Col md={6} lg={3}>
+              <GlassCard title="OPG">
+                <p>
+                  Vođenje poslovnih knjiga i podrška u ispunjavanju
+                  računovodstvenih i poreznih obveza.
+                </p>
+              </GlassCard>
+            </Col>
+
+            <Col md={6} lg={3}>
+              <GlassCard title="Udruge">
+                <p>
+                  Knjigovodstvene usluge prilagođene potrebama
+                  neprofitnih organizacija.
+                </p>
+              </GlassCard>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* ZAŠTO FIP */}
+      <section className="py-5">
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg={9}>
+              <GlassCard title="Zašto FIP?">
+                <Row className="g-4">
+                  <Col md={6}>
+                    <h5>Individualan pristup</h5>
+                    <p className="text-muted">
+                      Svaki klijent i svako poslovanje imaju svoje
+                      specifičnosti. Zato uslugu prilagođavamo
+                      stvarnim potrebama klijenta.
+                    </p>
+                  </Col>
+
+                  <Col md={6}>
+                    <h5>Stručnost i kontinuirano obrazovanje</h5>
+                    <p className="text-muted">
+                      Znanje kontinuirano nadograđujemo kroz stručne
+                      edukacije i praćenje zakonskih promjena.
+                    </p>
+                  </Col>
+
+                  <Col md={6}>
+                    <h5>Sigurnost podataka</h5>
+                    <p className="text-muted">
+                      Posebnu pažnju posvećujemo zaštiti povjerljivih
+                      financijskih i osobnih podataka naših klijenata.
+                    </p>
+                  </Col>
+
+                  <Col md={6}>
+                    <h5>Digitalno poslovanje</h5>
+                    <p className="text-muted">
+                      Koristimo suvremena programska rješenja kako bi
+                      poslovanje bilo jednostavnije, preglednije i
+                      učinkovitije.
+                    </p>
+                  </Col>
                 </Row>
-              </Row>
+              </GlassCard>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
+      {/* STRUČNOST */}
+      <section className="py-5">
+        <Container>
+          <Row className="align-items-center g-5">
+            <Col lg={7}>
+              <h2 className="fw-bold mb-4">
+                Znanje na kojem gradimo povjerenje
+              </h2>
 
+              <p className="text-muted">
+                FIP je nastao na temelju dugogodišnjeg obrazovanja
+                i kontinuiranog usavršavanja iz područja ekonomije,
+                financija, bankarstva i knjigovodstva.
+              </p>
 
+              <p className="text-muted">
+                Uz formalno obrazovanje i iskustvo, dodatno smo se
+                educirali iz područja knjigovodstva, zaštite osobnih
+                podataka i sprječavanja pranja novca.
+              </p>
 
-              <FloatingLabel controlId="floatingTextarea" label="Hvala! ">
-                <Form.Control
-                  as="textarea"
-                  placeholder="Ostavite upit ovdje"
-                  style={{ height: '100px' }}
-                />
-              </FloatingLabel>
-            </GlassCard>
-          </Col>
+              <p className="text-muted">
+                Pratimo zakonske izmjene i razvoj digitalnih rješenja
+                kako bismo svojim klijentima mogli pružiti kvalitetnu
+                i suvremenu uslugu.
+              </p>
+            </Col>
 
-        </Col>
-      </Row>
-    </Container>
+            <Col lg={5}>
+              <GlassCard title="Naš pristup">
+                <p>
+                  Profesionalnost.
+                  <br />
+                  Povjerenje.
+                  <br />
+                  Diskrecija.
+                  <br />
+                  Kontinuirano učenje.
+                  <br />
+                  Individualan odnos s klijentom.
+                </p>
+              </GlassCard>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* POZIV NA AKCIJU */}
+      <section className="py-5">
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col lg={8}>
+              <h2 className="fw-bold mb-3">
+                Razgovarajmo o vašem poslovanju.
+              </h2>
+
+              <p className="text-muted mb-4">
+                Trebate pouzdano knjigovodstvo, računovodstvo ili
+                financijski savjet? Javite nam se i zajedno ćemo
+                pronaći rješenje prilagođeno vašem poslovanju.
+              </p>
+
+              <button
+                className="btn btn-glass"
+                onClick={() => navigate(RouteNames.USLUGE)}
+              >
+                Pogledajte naše usluge
+              </button>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
   );
 }
+

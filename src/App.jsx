@@ -15,6 +15,7 @@ function App() {
       <Container className="mt-4">
         <Routes>
           <Route path={RouteNames.HOME} element={<Home />} />
+          <Route path={RouteNames.USLUGE} element={<Usluge />} />
         </Routes>
       </Container>
       <hr />

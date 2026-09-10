@@ -1,4 +1,4 @@
-export const IME_APLIKACIJE = "FIP Web"
+export const IME_APLIKACIJE = "FIP Knjigovodstvo i računovodstvo"
 
 
 export const RouteNames = {
@@ -7,11 +7,3 @@ export const RouteNames = {
     
 }
 
-// memorija, localStorage, firebase
-export const DATA_SOURCE = 'memorija';
-
-export const PrefixStorage = {
-    HOME: '/',
-    USLUGE: '/usluge'
-  
-}
