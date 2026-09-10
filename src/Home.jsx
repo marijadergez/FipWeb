@@ -1,5 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaArrowRight,
+} from "react-icons/fa";
+
 import { RouteNames } from "../constants";
 import GlassCard from "./components/GlassCard";
 
@@ -9,22 +16,23 @@ export default function Home() {
   return (
     <div className="page-content">
 
-      {/* =========================
+      {/* =========================================
           HERO
-          ========================= */}
+          ========================================= */}
+
       <section className="hero-section">
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg={9} className="hero-content">
 
-              <p className="text-muted mb-3">
+              <p className="hero-eyebrow">
                 FIP Knjigovodstvo i računovodstvo
               </p>
 
               <h1>
                 Vaša financijska kontrola.
                 <br />
-                Naša stručnost.
+                <span>Naša stručnost.</span>
               </h1>
 
               <p>
@@ -32,12 +40,15 @@ export default function Home() {
                 savjetovanje prilagođeno vašem poslovanju.
               </p>
 
-              <button
-                className="btn btn-primary"
-                onClick={() => navigate(RouteNames.USLUGE)}
-              >
-                Saznajte više o uslugama
-              </button>
+              <div className="hero-actions">
+                <button
+                  className="btn btn-primary"
+                  onClick={() => navigate(RouteNames.USLUGE)}
+                >
+                  Saznajte više o uslugama
+                  <FaArrowRight className="button-icon" />
+                </button>
+              </div>
 
             </Col>
           </Row>
@@ -45,16 +56,22 @@ export default function Home() {
       </section>
 
 
-      {/* =========================
+      {/* =========================================
           UVOD
-          ========================= */}
+          ========================================= */}
+
       <section className="section">
         <Container>
 
           <div className="section-heading">
+            <span className="section-label">
+              FIP računovodstvo
+            </span>
 
             <h2>
-              Vi vodite posao. Mi brinemo o brojkama.
+              Vi vodite posao.
+              <br />
+              Mi brinemo o brojkama.
             </h2>
 
             <p>
@@ -70,7 +87,6 @@ export default function Home() {
               informacije i pomoći vam da na temelju financijskih
               podataka donosite kvalitetne poslovne odluke.
             </p>
-
           </div>
 
 
@@ -118,39 +134,46 @@ export default function Home() {
       </section>
 
 
-      {/* =========================
+      {/* =========================================
           VIŠE OD KNJIGOVODSTVA
-          ========================= */}
-      <section className="section">
+          ========================================= */}
+
+      <section className="section section-soft">
         <Container>
 
           <Row className="align-items-center g-5">
 
             <Col lg={6}>
+              <div className="content-block">
 
-              <h2 className="fw-bold mb-4">
-                Više od klasičnog knjigovodstva
-              </h2>
+                <span className="section-label">
+                  Naš pristup
+                </span>
 
-              <p className="text-muted">
-                Suvremeno računovodstvo nije samo knjiženje računa.
-                Ono predstavlja važan izvor informacija za upravljanje
-                poslovanjem.
-              </p>
+                <h2>
+                  Više od klasičnog knjigovodstva
+                </h2>
 
-              <p className="text-muted">
-                Zato FIP svojim klijentima želi pružiti širi pogled na
-                njihovo poslovanje – od svakodnevnog knjigovodstva i
-                obračuna poreznih obveza do financijske analize,
-                planiranja i poslovnog savjetovanja.
-              </p>
+                <p>
+                  Suvremeno računovodstvo nije samo knjiženje računa.
+                  Ono predstavlja važan izvor informacija za upravljanje
+                  poslovanjem.
+                </p>
 
-              <p className="text-muted">
-                Posebnu pažnju posvećujemo digitalizaciji poslovanja,
-                sigurnosti podataka i individualnom pristupu svakom
-                klijentu.
-              </p>
+                <p>
+                  Zato FIP svojim klijentima želi pružiti širi pogled na
+                  njihovo poslovanje – od svakodnevnog knjigovodstva i
+                  obračuna poreznih obveza do financijske analize,
+                  planiranja i poslovnog savjetovanja.
+                </p>
 
+                <p>
+                  Posebnu pažnju posvećujemo digitalizaciji poslovanja,
+                  sigurnosti podataka i individualnom pristupu svakom
+                  klijentu.
+                </p>
+
+              </div>
             </Col>
 
 
@@ -158,7 +181,7 @@ export default function Home() {
 
               <GlassCard title="Usluge koje možemo pružiti">
 
-                <ul>
+                <ul className="service-list">
                   <li>Vođenje poslovnih knjiga</li>
                   <li>Obračun plaća i doprinosa</li>
                   <li>Obračun PDV-a</li>
@@ -181,13 +204,18 @@ export default function Home() {
       </section>
 
 
-      {/* =========================
+      {/* =========================================
           KOME POMAŽEMO
-          ========================= */}
+          ========================================= */}
+
       <section className="section">
         <Container>
 
           <div className="section-heading">
+
+            <span className="section-label">
+              Za koga radimo
+            </span>
 
             <h2>
               Partner za vaše poslovanje
@@ -246,59 +274,81 @@ export default function Home() {
       </section>
 
 
-      {/* =========================
+      {/* =========================================
           ZAŠTO FIP
-          ========================= */}
-      <section className="section">
+          ========================================= */}
+
+      <section className="section section-soft">
         <Container>
+
+          <div className="section-heading">
+
+            <span className="section-label">
+              Zašto FIP
+            </span>
+
+            <h2>
+              Računovodstvo kojem možete vjerovati
+            </h2>
+
+          </div>
+
 
           <Row className="justify-content-center">
 
             <Col lg={10}>
 
-              <GlassCard title="Zašto FIP?">
+              <GlassCard title="Naš način rada">
 
-                <Row className="g-4">
+                <Row className="g-5">
 
                   <Col md={6}>
-                    <h5>Individualan pristup</h5>
+                    <div className="feature-item">
+                      <h5>Individualan pristup</h5>
 
-                    <p className="text-muted">
-                      Svaki klijent i svako poslovanje imaju svoje
-                      specifičnosti. Zato uslugu prilagođavamo
-                      stvarnim potrebama klijenta.
-                    </p>
+                      <p>
+                        Svaki klijent i svako poslovanje imaju svoje
+                        specifičnosti. Zato uslugu prilagođavamo
+                        stvarnim potrebama klijenta.
+                      </p>
+                    </div>
                   </Col>
 
 
                   <Col md={6}>
-                    <h5>Stručnost i kontinuirano obrazovanje</h5>
+                    <div className="feature-item">
+                      <h5>Stručnost i kontinuirano obrazovanje</h5>
 
-                    <p className="text-muted">
-                      Znanje kontinuirano nadograđujemo kroz stručne
-                      edukacije i praćenje zakonskih promjena.
-                    </p>
+                      <p>
+                        Znanje kontinuirano nadograđujemo kroz stručne
+                        edukacije i praćenje zakonskih promjena.
+                      </p>
+                    </div>
                   </Col>
 
 
                   <Col md={6}>
-                    <h5>Sigurnost podataka</h5>
+                    <div className="feature-item">
+                      <h5>Sigurnost podataka</h5>
 
-                    <p className="text-muted">
-                      Posebnu pažnju posvećujemo zaštiti povjerljivih
-                      financijskih i osobnih podataka naših klijenata.
-                    </p>
+                      <p>
+                        Posebnu pažnju posvećujemo zaštiti povjerljivih
+                        financijskih i osobnih podataka naših klijenata.
+                      </p>
+                    </div>
                   </Col>
 
 
                   <Col md={6}>
-                    <h5>Digitalno poslovanje</h5>
+                    <div className="feature-item">
+                      <h5>Digitalno poslovanje</h5>
 
-                    <p className="text-muted">
-                      Koristimo suvremena programska rješenja kako bi
-                      poslovanje bilo jednostavnije, preglednije i
-                      učinkovitije.
-                    </p>
+                      <p>
+                        Koristimo suvremena programska rješenja kako bi
+                        poslovanje bilo jednostavnije, preglednije i
+                        učinkovitije.
+                      </p>
+                    </div>
                   </Col>
 
                 </Row>
@@ -313,9 +363,10 @@ export default function Home() {
       </section>
 
 
-      {/* =========================
+      {/* =========================================
           STRUČNOST
-          ========================= */}
+          ========================================= */}
+
       <section className="section">
         <Container>
 
@@ -323,27 +374,35 @@ export default function Home() {
 
             <Col lg={7}>
 
-              <h2 className="fw-bold mb-4">
-                Znanje na kojem gradimo povjerenje
-              </h2>
+              <div className="content-block">
 
-              <p className="text-muted">
-                FIP je nastao na temelju dugogodišnjeg obrazovanja
-                i kontinuiranog usavršavanja iz područja ekonomije,
-                financija, bankarstva i knjigovodstva.
-              </p>
+                <span className="section-label">
+                  Stručnost
+                </span>
 
-              <p className="text-muted">
-                Uz formalno obrazovanje i iskustvo, dodatno smo se
-                educirali iz područja knjigovodstva, zaštite osobnih
-                podataka i sprječavanja pranja novca.
-              </p>
+                <h2>
+                  Znanje na kojem gradimo povjerenje
+                </h2>
 
-              <p className="text-muted">
-                Pratimo zakonske izmjene i razvoj digitalnih rješenja
-                kako bismo svojim klijentima mogli pružiti kvalitetnu
-                i suvremenu uslugu.
-              </p>
+                <p>
+                  FIP je nastao na temelju dugogodišnjeg obrazovanja
+                  i kontinuiranog usavršavanja iz područja ekonomije,
+                  financija, bankarstva i knjigovodstva.
+                </p>
+
+                <p>
+                  Uz formalno obrazovanje i iskustvo, dodatno smo se
+                  educirali iz područja knjigovodstva, zaštite osobnih
+                  podataka i sprječavanja pranja novca.
+                </p>
+
+                <p>
+                  Pratimo zakonske izmjene i razvoj digitalnih rješenja
+                  kako bismo svojim klijentima mogli pružiti kvalitetnu
+                  i suvremenu uslugu.
+                </p>
+
+              </div>
 
             </Col>
 
@@ -352,17 +411,15 @@ export default function Home() {
 
               <GlassCard title="Naš pristup">
 
-                <p>
-                  Profesionalnost.
-                  <br />
-                  Povjerenje.
-                  <br />
-                  Diskrecija.
-                  <br />
-                  Kontinuirano učenje.
-                  <br />
-                  Individualan odnos s klijentom.
-                </p>
+                <div className="approach-list">
+
+                  <div>Profesionalnost</div>
+                  <div>Povjerenje</div>
+                  <div>Diskrecija</div>
+                  <div>Kontinuirano učenje</div>
+                  <div>Individualan odnos s klijentom</div>
+
+                </div>
 
               </GlassCard>
 
@@ -374,29 +431,125 @@ export default function Home() {
       </section>
 
 
-      {/* =========================
+      {/* =========================================
           CTA
-          ========================= */}
+          ========================================= */}
+
       <section className="cta-section">
 
-        <h2>
-          Razgovarajmo o vašem poslovanju.
-        </h2>
+        <div className="cta-inner">
 
-        <p>
-          Trebate pouzdano knjigovodstvo, računovodstvo ili
-          financijski savjet? Javite nam se i zajedno ćemo
-          pronaći rješenje prilagođeno vašem poslovanju.
-        </p>
+          <span className="cta-label">
+            Razgovarajmo
+          </span>
 
-        <button
-          className="btn btn-light"
-          onClick={() => navigate(RouteNames.USLUGE)}
-        >
-          Pogledajte naše usluge
-        </button>
+          <h2>
+            Razgovarajmo o vašem poslovanju.
+          </h2>
+
+          <p>
+            Trebate pouzdano knjigovodstvo, računovodstvo ili
+            financijski savjet? Javite nam se i zajedno ćemo
+            pronaći rješenje prilagođeno vašem poslovanju.
+          </p>
+
+          <button
+            className="btn btn-light"
+            onClick={() => navigate(RouteNames.USLUGE)}
+          >
+            Pogledajte naše usluge
+            <FaArrowRight className="button-icon" />
+          </button>
+
+        </div>
 
       </section>
+
+
+      {/* =========================================
+          FOOTER
+          ========================================= */}
+
+      <footer className="fip-footer">
+
+        <Container>
+
+          <Row className="g-4 align-items-center">
+
+            <Col md={6} className="text-md-start text-center">
+
+              <div className="footer-brand">
+                <span className="footer-logo">
+                  FIP
+                </span>
+
+                <div>
+                  <strong>
+                    FIP Knjigovodstvo i računovodstvo
+                  </strong>
+
+                  <span>
+                    Pouzdani partner vašeg poslovanja
+                  </span>
+                </div>
+              </div>
+
+            </Col>
+
+
+            <Col md={6}>
+
+              <div className="footer-social">
+
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="social-icon"
+                >
+                  <FaInstagram />
+                </a>
+
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="social-icon"
+                >
+                  <FaFacebookF />
+                </a>
+
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="social-icon"
+                >
+                  <FaLinkedinIn />
+                </a>
+
+              </div>
+
+            </Col>
+
+          </Row>
+
+   
+          <div className="footer-bottom">
+
+  
+
+
+            <span>
+              © {new Date().getFullYear()} FIP Knjigovodstvo i računovodstvo App | MDergez |
+            </span>
+
+            <span>
+              Sva prava pridržana.
+            </span>
+
+          </div>
+
+        </Container>
+
+      </footer>
 
     </div>
   );

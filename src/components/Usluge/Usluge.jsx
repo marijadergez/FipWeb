@@ -10,9 +10,7 @@ export default function Usluge() {
 
       <Row className="justify-content-center text-center mb-5">
         <Col lg={8}>
-          <p className="text-muted mb-2">
-            FIP Knjigovodstvo i računovodstvo
-          </p>
+        
 
           <h1 className="display-4 fw-bold mb-3">
             Naše usluge
@@ -353,6 +351,14 @@ export default function Usluge() {
           <button className="btn btn-glass">
             Kontaktirajte nas
           </button>
+
+          <span>
+              © {new Date().getFullYear()} FIP Knjigovodstvo i računovodstvo App | MDergez |
+            </span>
+
+            <span>
+              Sva prava pridržana.
+            </span>
 
         </Col>
       </Row>
